@@ -1,0 +1,50 @@
+body {
+background: #f7f7f7;
+
+}
+
+h4 {
+   color: #fff;
+}
+
+div {
+  /*background: #000000;*/
+}
+
+span {
+  color: white;
+}
+
+.falt {
+  height: 500px;
+  background: #000000;
+  color: #fff;
+
+  font-family: 'verdana', sans-serif;
+  font-size: 20px;
+}
+
+input[type=text], select {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=button] {
+    width: 40%;
+    background-color: #AB3AA4;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    background-color: #62225E;
+}

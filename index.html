@@ -1,0 +1,63 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<link rel="stylesheet" href="style.css">
+<noscript>
+  <meta http-equiv="refresh" content="0; URL=http://example.com/noscript.html"/>
+</noscript>
+<title></title>
+<script src="assets/js/player.js"></script>
+<script src="assets/js/fizz_calulator.js"></script>
+<script src='https://code.jquery.com/jquery-2.1.4.js'></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+  $('#calculate').click(function () {
+    var p = parseFloat($('#player1').val());
+    var p2 = parseFloat($('#player2').val());
+    var player = new Player({player1: p, player2: p2});
+  player.calculate_fizz();
+
+
+  $('#display_message').html(player.fizzMessage);
+  $('#display_message2').html(player.fizzMessage2);
+  $('#display_winner').html(player.winner);
+  });
+});
+</script>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+
+   <body>
+    <div class="row">
+      <div class="large-3 columns">&nbsp;
+      </div>
+        <div class="falt large-6 columns">
+        <img src="img/fizz_logo.jpg">
+        <br>
+        <br>lets play the fizz buzz Game the rolls are easy just <br>
+        shose the higest number that is dividible by 3 and 5.
+
+         <form>
+          <input  type="text" id="player1" placeholder="Player1">&nbsp;
+          <br><span id="display_message"></span><br>
+          <input  type="text" id="player2" placeholder="Player2">&nbsp;
+          <br><span id="display_message2"></span><br>
+          <input type="button" id="calculate" value="Calculate">
+          <br><span id="display_winner"></span><br>
+        </form>
+        </div>
+        <div class="large-3 columns">&nbsp;
+        </div>
+      </div>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <noscript>
+    <meta http-equiv="refresh" content="0; URL=http://example.com/noscript.html"/>
+</noscript>
+    <title></title>
+    <script src="assets/js/player.js"></script>
+    <script src="assets/js/fizz_calulator.js"></script>
+    <script src='https://code.jquery.com/jquery-2.1.4.js'></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+      $('#calculate').click(function () {
+        var p = parseFloat($('#player1').val());
+        var player = new Player({player1: p});
+      player.calculate_fizz();
+      $('#display_message').html('You got '+ player.fizzMessage);
+      });
+  });
+</script>
+  </head>
+  <body>
+    <form>
+      <input  type="text" id="player1" placeholder="Your number">&nbsp;
+        <br><br>
+      <input type="button" id="calculate" value="Calculate">
+    </form>
+    <div>
+
+     <span id="display_message"></span>
+   </div>
+  </body>
+</html>
